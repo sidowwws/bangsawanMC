@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import homepage from "./assets/homepagesasset.gif";
 import profile from "./assets/profile.webp";
 import AspirasiForm from "./components/AspirasiForm";
@@ -105,12 +105,12 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/masuk" element={<Masuk />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
 
       {/* overlay loading, hilang otomatis setelah 3 detik */}
       {loading && <Login onFinish={handleFinish} />}
